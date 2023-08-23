@@ -13,7 +13,7 @@ export default function Join({ setChatVisibility, setSocket }: JoinProps): JSX.E
     const username = usernameRef.current?.value;
     if (!username?.trim()) return;
 
-    const socket: Socket = io('http://localhost:8080'); 
+    const socket: Socket = io('http://localhost:8080/'); 
     socket.emit('set_username', username);
     setSocket(socket);
     setChatVisibility(true);
