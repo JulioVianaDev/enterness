@@ -33,3 +33,15 @@
 ### Para o deploy foi utilizado o render para o backend e a vercel para o react no frontend como mostra a imagem abaixo:
 
 <img src="./imagesReadme/deployConfig.png">
+
+# Docker Configuração
+
+## Para facilitar o deploy do projeto foi configurado um setup no docker-compose para rodar é só digitar:
+
+```docker-compose up```
+
+### Para isso o projeto foi dividido em dois containers com duas imagens em comunicação
+
+- O frontend está no Dockerfile apontando para a porta 3000 
+- O backend para a porta 8080 
+- Repare que o frontend é uma imagem dependente do backend então primeiro vai subir o backend para depois o frontend
