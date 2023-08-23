@@ -1,6 +1,9 @@
 const app = require('express')()
 const server = require('http').createServer(app)
-const io = require('socket.io')(server, {cors: {origin: 'http://localhost:3000'}})
+require('dotenv').config()
+
+const FRONT_URL = process.env.FRONT_URL
+const io = require('socket.io')(server, {cors: {origin: FRONT_URL}})
 
 const PORT = 8080
 
