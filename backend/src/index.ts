@@ -5,7 +5,7 @@ const server = require('http').createServer(app)
 require('dotenv').config()
 
 const FRONT_URL = process.env.FRONT_URL
-const io = require('socket.io')(server, {cors: {origin: FRONT_URL}})
+const io = require('socket.io')(server, {cors: {origin: "*"}})
 
 const PORT = 8080
 
