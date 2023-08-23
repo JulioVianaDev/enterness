@@ -1,7 +1,7 @@
 const app = require('express')()
 const cors = require("cors")
 app.use(cors())
-const server = require('https').createServer(app)
+const server = require('http').createServer(app)
 require('dotenv').config()
 
 const FRONT_URL = process.env.FRONT_URL
